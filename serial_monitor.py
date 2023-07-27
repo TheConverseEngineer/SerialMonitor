@@ -109,6 +109,6 @@ if __name__ == "__main__":
             if cmd == '-b': baud_rate = int(param)
             elif cmd == '-v': verbose = True
             elif cmd == '-f': save_to_file = True
-            elif cmd == '-d': delimiter = b'\n'
+            elif cmd == '-d': delimiter = bytes(param, ENCODING_SCHEME)
         
         main(args, baud_rate, delimiter, verbose, save_to_file)
